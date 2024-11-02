@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+}
+
+.app {
+  padding: 2rem clamp(1rem, 6%, 6rem);
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+.loader {
+  margin: 3rem auto;
+  width: fit-content;
+}
+
+.header {
+  margin-bottom: 1rem;
+  background-color: #f8f8f8;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #cfede7;
+}
+
+.header>div {
+  padding: 1rem clamp(1rem, 6%, 6rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header input {
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #006A55;
+  padding: .6rem .9rem;
+}
+
+.header input:focus {
+  outline: 1px solid hsl(168, 100%, 21%, .2);
+}
+
+h1 {
+  color: #006A55;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.post-list li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #006A55;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: #fff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  line-height: 1.5;
+}
+
+.modal button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: .8rem;
+  right: .8rem;
+  cursor: pointer;
+}
